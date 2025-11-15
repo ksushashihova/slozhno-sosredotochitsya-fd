@@ -9,8 +9,9 @@
   --section-title-color:#353430;
   --content-section__subtitle-color: #353430;
   --accent-color-bottom: #353430;
-  --accent-color-decor: #353430;
+  --accent-color-decor: #353430; 
   --bg-color-all: #FFF1F7;
+  --header-title-color-shadow: #FF0070;
   
 }
 .theme-light .header__rec {
@@ -32,6 +33,7 @@
     --content-section__subtitle-color: #353430;
     --accent-color-bottom: #353430;
     --accent-color-decor: #353430;
+    --header-title-color-shadow: #FF0070;
   }
   
   .header__rec {
