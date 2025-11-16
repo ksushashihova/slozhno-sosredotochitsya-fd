@@ -12,15 +12,11 @@
   --accent-color-decor: #353430; 
   --bg-color-all: #FFF1F7;
   --header-title-color-shadow: #FF0070;
-  
 }
 .theme-light .header__rec {
   display: none;
 }
   
-
-
-
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #FF8DCB;
