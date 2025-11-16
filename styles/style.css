@@ -1,7 +1,7 @@
 .page {
   color: var(--text-color);
   font-family: var(--page-font);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-all);
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
@@ -48,15 +48,13 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color-bottom);
+  border: 1px solid var(--accent-color-bottom-decor);
   outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color-bottom);
   outline: none;
-  text-decoration: underline;
-  text-decoration-color: var(--accent-color-bottom);
-  text-underline-offset: 3px;
 }
 
 .header__title {
@@ -70,6 +68,7 @@
   line-height: 0.8;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
+
 
 .header__subtitle {
   grid-row: 3;
@@ -136,8 +135,7 @@
 .main {
   display: grid;
   gap: 50px;
-  padding: 40px 10px;
-  background-color: var(--bg-color-all);
+  padding: 40px 10px; 
 }
 
 .content-section {
@@ -154,6 +152,9 @@
 .content-section__subtitle {
   color: var(--content-section__subtitle-color);
   font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0;
   background-color: var(--accent-color);
 }
 
@@ -189,15 +190,13 @@
 
 .gallery-list {
   display: grid;
-  gap: 10px;
+  gap: 5px;
 }
 
 .gallery-list img {
-  width: 350px;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
-
-  
+  object-fit: contain; 
 }
 
 a {
@@ -211,9 +210,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-  text-underline-offset: 2px;
+  border-bottom: 1px solid var(--text-color);
+  text-decoration: none;
 }
 
 a:focus-visible {
@@ -227,7 +225,6 @@ a:focus-visible {
   height: 100vh;
   min-height: 668px;
   padding: 10px;
-  background-color: var(--bg-color-all);
 }
 
 .footer__title {
@@ -244,7 +241,7 @@ a:focus-visible {
   font-size: 18px;
 }
 
-.card__title_thin {
+.card__title--secondary {
   color: #000028;
   font-family: 'IBM Plex Mono';
   font-weight: 400;
@@ -253,16 +250,12 @@ a:focus-visible {
   line-height: 23px;
 }
 
-/* Media Queries */
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
-    min-height: 1024px;
     padding: 20px;
   }
 
   .footer {
-    min-height: 1024px;
     padding: 20px;
   }
 
@@ -271,8 +264,12 @@ a:focus-visible {
     padding: 60px 20px;
   }
 
+  .article__text--note {
+    max-width: 472px;
+  }
+
   .content-section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(0, 236px) 1fr 1fr;
   }
 
   .content-section__wrapper {
@@ -280,7 +277,7 @@ a:focus-visible {
     align-items: start;
   }
 
-  .content-section_type_row .content-section__wrapper {
+  .content-section_features .content-section__wrapper {
     grid-column: 1 / -1;
   }
 
@@ -295,24 +292,24 @@ a:focus-visible {
   }
 
   .gallery-list img {
-  width: 99%;
+    object-fit: cover;
   }
 
-  .gallery-sunset {
+  .gallery-item--sunset {
     grid-column: 1 / 3;
   }
 
-  .gallery-icecream {
+  .gallery-item--icecream {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
   }
 
-  .gallery-muisuc {
+  .gallery-item--muisuc {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
 
-  .gallery-window {
+  .gallery-item--window {
     grid-column: 2 / 4;
   }
 
@@ -340,7 +337,7 @@ a:focus-visible {
     right: 50px;
   }
   .header__subtitle { 
-  max-inline-size: 50%;
+    max-inline-size: 50%;
   }
 }
 
@@ -361,49 +358,53 @@ a:focus-visible {
   }
 
   .content-section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(0, 315px) 1fr 1fr;
+  }
+
+  .article__text--note {
+    max-width: 649px;
   }
 
   .content-section__wrapper {
     grid-column: span 2;
     align-items: start;
+    align-self: start;
+    height: auto;  
   }
 
-  .content-section_type_row .content-section__wrapper {
+  .content-section_features .content-section__wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / -1;
   }
 
   .gallery {
     gap: 20px;
-
   }
 
   .gallery-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
   .gallery-list img {
-  width: 99%;
+   object-fit: cover;
+  }
 
-
-  
-}
-  .gallery-sunset {
+  .gallery-item--sunset {
     grid-column: 1 / 3;
   }
 
-  .gallery-icecream {
+  .gallery-item--icecream {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
   }
 
-  .gallery-muisuc {
+  .gallery-item--muisuc {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
 
-  .gallery-window {
+  .gallery-item--window {
     grid-column: 2 / 4;
   }
 
@@ -439,6 +440,7 @@ a:focus-visible {
     top: 20px;
     right: 50px;
   }
+  
   .header__subtitle {
   max-inline-size: 50%;
   }
