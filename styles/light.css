@@ -14,6 +14,7 @@
   --header-title-color-shadow: #FF0070;
   --accent-color-bottom-decor: rgba(50, 49, 45, 0.4)
 }
+
 .theme-light .header__rec {
   display: none;
 }
