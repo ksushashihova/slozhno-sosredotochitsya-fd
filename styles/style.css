@@ -229,7 +229,6 @@ a:focus-visible {
 
 .footer__title {
   color: var(--header-title-color);
-  font-family: 'IBM Plex Mono';
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.8;
@@ -243,7 +242,6 @@ a:focus-visible {
 
 .card__title--secondary {
   color: #000028;
-  font-family: 'IBM Plex Mono';
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
