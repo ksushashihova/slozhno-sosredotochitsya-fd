@@ -7,11 +7,12 @@
   --text-color: #F1B2CE;
   --bg-color: #000028;
   --bg-image: url('../images/cover-image-dark.png');
-  --content-section__subtitle-color: #000028;
+  --content-section-subtitle-color: #000028;
   --header-title-color: #DB00FF;
   --page-font: 'IBM Plex Mono', monospace;
   --header-title-color-shadow: #FF0070;
   --accent-color-bottom-decor: rgba(255, 0, 100, 0.4);
+  --bg-color-all: #000028;
   }
 
 

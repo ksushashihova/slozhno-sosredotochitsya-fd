@@ -1,6 +1,6 @@
 .page {
   color: var(--text-color);
-  font-family: var(--page-font);
+  font-family: var(--page-font), monospace;
   background-color: var(--bg-color-all);
   background-image: var(--bg-image);
   background-size: cover;
@@ -150,7 +150,7 @@
 }
 
 .content-section__subtitle {
-  color: var(--content-section__subtitle-color);
+  color: var(--content-section-subtitle-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -264,10 +264,6 @@ a:focus-visible {
     padding: 60px 20px;
   }
 
-  .article__text--note {
-    max-width: 472px;
-  }
-
   .content-section {
     grid-template-columns: minmax(0, 236px) 1fr 1fr;
   }
@@ -283,7 +279,6 @@ a:focus-visible {
 
   .gallery {
     gap: 20px;
-    min-height: 823px;
   }
 
   .gallery-list {
@@ -343,12 +338,10 @@ a:focus-visible {
 
 @media (min-width: 1024px) {
   .header {
-    min-height: 768px;
     padding: 20px;
   }
 
   .footer {
-    min-height: 768px;
     padding: 20px;
   }
 
@@ -361,9 +354,6 @@ a:focus-visible {
     grid-template-columns: minmax(0, 315px) 1fr 1fr;
   }
 
-  .article__text--note {
-    max-width: 649px;
-  }
 
   .content-section__wrapper {
     grid-column: span 2;
